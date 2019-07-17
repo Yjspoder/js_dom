@@ -314,3 +314,17 @@ quotes = [
         "quoteText": "Great talent finds happiness in execution."
     }
 ];
+
+
+var author = document.querySelector(".author");
+var quote = document.querySelector(".quote");
+
+function random(e){
+    if(e.keyCode == 32){
+        event = Math.floor(Math.random() * quotes.length);
+		quote.innerText = `${quotes[event].quoteText}`;
+		author.innerText = `${quotes[event].quoteAuthor}`;
+    }
+}
+
+document.addEventListener("keydown" , random);
