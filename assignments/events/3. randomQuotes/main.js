@@ -1,10 +1,8 @@
-var quotes;
-
-// Write your code here
 
 
 
-quotes = [
+
+var quotes = [
     {
         "quoteAuthor": "Thomas Edison",
         "quoteText": "Genius is one percent inspiration and ninety-nine percent perspiration."
@@ -315,7 +313,7 @@ quotes = [
     }
 ];
 
-
+``
 var author = document.querySelector(".author");
 var quote = document.querySelector(".quote");
 
@@ -323,7 +321,9 @@ function random(e){
     if(e.keyCode == 32){
         event = Math.floor(Math.random() * quotes.length);
 		quote.innerText = `${quotes[event].quoteText}`;
-		author.innerText = `${quotes[event].quoteAuthor}`;
+        author.innerText = `${quotes[event].quoteAuthor}`;
+        document.body.style.background = `linear-gradient(to right, #${Math.floor(Math.random() * 1000000)},#${Math.floor(Math.random() * 1000000)}`;
+        // quote.style.color =  `linear-gradient(to right, #${Math.floor(Math.random() * 1000000)},#${Math.floor(Math.random() * 1000000)}`;
     }
 }
 
